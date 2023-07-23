@@ -37,22 +37,6 @@ const Habit = ({habit}) => {
 
   
   return (
-    // <div className="habit">
-    //   <div className="habit-left">
-    //     <i className="fa-solid fa-hashtag"></i>
-    //     <div>
-    //       <h4 style={{textTransform:"capitalize"}}>{habit.name}</h4>
-    //       <p className="day-complete">{countDone}/{todayDay+1} days</p>
-    //     </div>
-    //   </div>
-    //   <div className="habit-right">
-    //     <div className="log-btn" onClick={setId}>
-    //       <i className="fa-solid fa-calendar-week" ></i>
-    //       Week View
-    //     </div>
-    //     <i className="fa-solid fa-trash" onClick={handleDelete}></i>
-    //   </div>
-    // </div>
  <div className="habit">
       <div className="habit-left">
         <i className="fa-solid fa-hashtag"></i>

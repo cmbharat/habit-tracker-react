@@ -19,15 +19,28 @@ const WeeklyView = () => {
   return (
     <>
       <Navbar name="Week View" />
-      <h1 className="text-center" style={{textTransform:"capitalize"}}>{habit.name}</h1>
-      <div className="days-container">
-        {habit.weekLog.map((day,index)=><DayView day={day} key={index}/>)}
-      </div>
-      <div className="d-grid gap-2 col-6 mx-auto mt-5">
-        <button className="btn btn-primary" type="button">
-          <Link to="/">Back to Detail View</Link>
-        </button>
-      </div>
+      { habit.weekLog ? (
+      <div className="days-container-body">
+        <h1 className="text-center" style={{textTransform:"capitalize"}}>{habit.name}</h1>
+        <div className="days-container">
+          {habit.weekLog.map((day,index)=><DayView day={day} key={index}/>)}
+        </div>
+        <div className="d-grid gap-2 col-6 mx-auto mt-5">
+          <button className="btn btn-primary" type="button">
+            <Link to="/" className="link-fonts">Back to Detail View</Link>
+          </button>
+        </div>
+      </div>):(<div className="days-container-body">
+        <h1 className="text-center" style={{textTransform:"capitalize"}}>No Content to Display
+        </h1>
+        
+        <div className="d-grid gap-2 col-6 mx-auto mt-5">
+          <button className="btn btn-primary" type="button">
+            <Link to="/" className="link-fonts">Back to Detail View</Link>
+          </button>
+        </div>
+      </div>)}
+
     </>
   );
 };

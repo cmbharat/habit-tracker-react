@@ -5,7 +5,7 @@ import Navbar from "./Navbar.jsx"
 const Home =()=>{
     
            return <>
-           <Navbar name="All Habits"/>
+           <Navbar/>
            <Habits/>
            </> 
         
