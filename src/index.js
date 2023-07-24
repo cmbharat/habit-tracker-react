@@ -5,6 +5,7 @@ import { store } from "./redux/store";
 import App from "./App";
 import "./index.css";
 import "react-responsive-modal/styles.css";
+import "./bootstrap/css/bootstrap.min.css";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
