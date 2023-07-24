@@ -46,7 +46,7 @@ const [habitName, setHabitName] = useState("");
           {/* <li><a href="index.html#contact">{name}</a></li> */}
         </ul>
       </nav>
-      <a className="btn-getstarted" onClick={onOpenModal}>Add Habit</a>
+      <button className="btn-getstarted" onClick={onOpenModal}>Add Habit</button>
 
       <Modal open={open} onClose={onCloseModal} center>
                 <div className="modalContentContainer">
