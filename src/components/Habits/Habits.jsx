@@ -6,8 +6,6 @@ const Habits =()=>{
     
     const habitsList=useSelector(state=>state.habits);
 
-    console.log(habitsList,"=====>Goalslist")
-
     return (        
     
     <div className='habits'>
