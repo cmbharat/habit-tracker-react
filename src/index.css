@@ -1,58 +1,35 @@
-/* Fonts */
-:root {
-    --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-primary: "Montserrat", sans-serif;
-    --font-secondary: "Lato", sans-serif;
-}
-
-/* Global Colors */
-:root {
-    --color-default: #212529;
-    --color-default-rgb: 33, 37, 41;
-    --color-background: #ffffff;
-    --color-background-rgb: 255, 255, 255;
-    --color-primary: #e84545;
-    --color-primary-rgb: 232, 69, 69;
-    --color-secondary: #32353a;
-    --color-secondary-rgb: 50, 53, 58;
-    --color-box-background: #ffffff;
-    --color-box-background-rgb: 255, 255, 255;
-    --color-inverse: #ffffff;
-    --color-inverse-rgb: 255, 255, 255;
-}
-
-/* Nav Menu Colors */
-:root {
-    --color-nav: #3a3939;
-    --color-nav-hover: #e84545;
-    --color-nav-dropdown: #3a3939;
-    --color-nav-dropdown-hover: #e84545;
-    --color-nav-dropdown-background: #ffffff;
-    --color-nav-mobile-background: #ffffff;
-}
-
-/* Smooth scroll */
-:root {
-    scroll-behavior: smooth;
-}
 
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
-    color: var(--color-default);
-    background-color: var(--color-background);
-    font-family: var(--font-default);
+    color: #212529;
+    background-color: #ffffff;
+    font-family: "Open Sans",
+        system-ui,
+        -apple-system,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        "Liberation Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+        scroll-behavior: smooth;
 }
 
 a {
-    color: var(--color-primary);
+    color: #e84545;
     text-decoration: none;
     transition: 0.3s;
 }
 
 a:hover {
-    color: rgba(var(--color-primary-rgb), 0.7);
+    color: rgba( 232, 69, 69, 0.7);
     text-decoration: none;
 }
 
@@ -62,31 +39,32 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-primary);
+    font-family: "Montserrat",
+        sans-serif;
 }
 
 /*--------------------------------------------------------------
 # Page Title & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
-    --color-box-background: rgba(var(--color-default-rgb), .05);
-    color: var(--color-default);
-    background-color: var(--color-background);
+    /* --color-box-background: rgba(33, 37, 41, .05); */
+    color: #212529;
+    background-color: #ffffff;
 }
 
 .page-title .heading {
     padding: 80px 0;
-    border-top: 1px solid rgba(var(--color-default-rgb), 0.1);
+    border-top: 1px solid rgba(33, 37, 41, 0.1);
 }
 
 .page-title .heading h1 {
     font-size: 38px;
     font-weight: 700;
-    color: var(--color-secondary);
+    color: #32353a;
 }
 
 .page-title nav {
-    background-color: var(--color-box-background);
+    background-color: #ffffff;
     padding: 20px 0;
 }
 
@@ -103,21 +81,19 @@ h6 {
     padding-left: 10px;
 }
 
-.page-title nav ol li+li::before {
+/* .page-title nav ol li+li::before {
     content: "/";
     display: inline-block;
     padding-right: 10px;
-    color: rgba(var(--color-default-rgb), 0.3);
-}
+    color: rgba(33, 37, 41, 0.3);
+} */
 
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
 .header {
-    --color-background: #ffffff;
-    --color-inverse: #ffffff;
-    color: var(--color-default);
-    background-color: var(--color-background);
+    color: #212529;;
+    background-color: #ffffff;
     padding: 15px 0;
     transition: all 0.5s;
     z-index: 997;
@@ -132,11 +108,11 @@ h6 {
     font-size: 24px;
     margin: 0;
     font-weight: 600;
-    color: var(--color-secondary);
+    color: #32353a;
 }
 
 .header .logo span {
-    color: var(--color-primary);
+    color: #e84545;
     font-size: 24px;
     font-weight: 600;
     padding-left: 3px;
@@ -144,8 +120,8 @@ h6 {
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
-    color: var(--color-inverse);
-    background: var(--color-primary);
+    color: #ffffff;;
+    background: #e84545;
     font-size: 14px;
     padding: 8px 26px;
     margin: 0;
@@ -155,8 +131,8 @@ h6 {
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
-    color: var(--color-inverse);
-    background: rgba(var(--color-primary-rgb), 0.85);
+    color: #ffffff;;
+    background: rgba( 232, 69, 69, 0.85);
     cursor: pointer;
 }
 
@@ -176,15 +152,6 @@ h6 {
     }
 }
 
-/* Global Header on page scroll
-------------------------------*/
-.scrolled .header {
-    --color-background: #ffffff;
-    --color-secondary: #444444;
-    --color-nav: #444444;
-    --color-nav-hover: #e84545;
-    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
-}
 
 /* Global Scroll Margin Top
 ------------------------------*/
@@ -196,24 +163,6 @@ section {
     section {
         scroll-margin-top: 66px;
     }
-}
-
-/* Home Page Custom Header
-------------------------------*/
-.index-page .header {
-    --color-background: rgba(255, 255, 255, 0);
-    --color-secondary: #ffffff;
-    --color-nav: rgba(255, 255, 255, 0.515);
-    --color-nav-hover: #ffffff;
-}
-
-/* Home Page Custom Header on page scroll
-------------------------------*/
-.index-page.scrolled .header {
-    --color-background: #ffffff;
-    --color-secondary: #444444;
-    --color-nav: #444444;
-    --color-nav-hover: #d83535;
 }
 
 /*--------------------------------------------------------------
@@ -244,7 +193,7 @@ section {
     .navmenu li:hover>a,
     .navmenu .active,
     .navmenu .active:focus {
-        color: var(--color-nav-hover);
+        color: #e84545
     }
 
 }
@@ -252,7 +201,7 @@ section {
 /* Mobile Navigation */
 @media (max-width: 1199px) {
     .mobile-nav-toggle {
-        color: var(--color-nav);
+        color: #3a3939;
         font-size: 28px;
         line-height: 0;
         margin-right: 10px;
@@ -272,11 +221,11 @@ section {
         padding: 10px 0;
         margin: 0;
         border-radius: 6px;
-        background-color: var(--color-nav-mobile-background);
+        background-color: #ffffff;
         overflow-y: auto;
         transition: 0.3s;
         z-index: 9998;
-        box-shadow: 0px 0px 30px rgba(var(--color-default-rgb), 0.1);
+        box-shadow: 0px 0px 30px rgba(33, 37, 41, 0.1);
     }
 
 
@@ -363,49 +312,6 @@ section {
 }
 
 /**/
-
-/*--------------------------------------------------------------
-# Scroll Top Button
---------------------------------------------------------------*/
-.scroll-top {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 15px;
-    bottom: 15px;
-    z-index: 99999;
-    background-color: var(--color-primary);
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    transition: all 0.4s;
-}
-
-.scroll-top i {
-    font-size: 24px;
-    color: #ffffff;
-    line-height: 0;
-}
-
-.scroll-top:hover {
-    background-color: rgba(var(--color-primary-rgb), 0.8);
-    color: #ffffff;
-}
-
-.scroll-top.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-    [data-aos-delay] {
-        transition-delay: 0 !important;
-    }
-}
-
 /*--------------------------------------------------------------
 # Home Page
 --------------------------------------------------------------*/
